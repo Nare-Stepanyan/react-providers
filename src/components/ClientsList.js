@@ -150,6 +150,7 @@ class ClientsList extends PureComponent {
       const body = { name };
       request(url, "POST", body)
         .then((response) => {
+          console.log(response);
           const newProvider = response;
           this.setState({
             providers: [...this.state.providers, newProvider],

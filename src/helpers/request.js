@@ -4,7 +4,8 @@ function request(url, method = "GET", body) {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "origin",
+      "Access-Control-Allow-Origin":
+        "https://awesome-wilson-059c3e.netlify.app",
     },
   };
   if (body) {

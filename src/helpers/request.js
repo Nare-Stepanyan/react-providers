@@ -4,6 +4,7 @@ function request(url, method = "GET", body) {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     },
   };
   if (body) {

@@ -1,6 +1,7 @@
 function request(url, method = "GET", body) {
   const config = {
     method: method,
+    withCredentials: true,
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "https://providers-node-api.herokuapp.com",

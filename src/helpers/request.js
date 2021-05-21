@@ -1,7 +1,6 @@
 function request(url, method = "GET", body) {
   const config = {
     method: method,
-    credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },

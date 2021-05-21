@@ -3,6 +3,7 @@ function request(url, method = "GET", body) {
     method: method,
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://providers-node-api.herokuapp.com",
     },
   };
   if (body) {

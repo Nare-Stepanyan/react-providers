@@ -8,10 +8,6 @@ function request(url, method = "GET", body) {
   if (body) {
     config.body = JSON.stringify(body);
   }
-  if (body) {
-    config.body = body;
-  }
-
   return fetch(url, config)
     .then((res) => res.json())
     .then((response) => {

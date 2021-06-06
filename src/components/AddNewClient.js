@@ -14,7 +14,7 @@ class AddNewClient extends PureComponent {
     if (providerInput !== "") {
       if (isProviderExist(providerInput, this.props.providers)) {
         this.setState({
-          providerInput: "*provider already exists",
+          providerExists: true,
         });
       } else {
         this.props.addNewProvider(providerInput);

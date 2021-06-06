@@ -8,6 +8,7 @@ class AddNewClient extends PureComponent {
   state = {
     providerInput: "",
     providerExists: false,
+    isEmpty: false,
   };
   handleClick = () => {
     const { providerInput } = this.state;
@@ -15,17 +16,20 @@ class AddNewClient extends PureComponent {
       if (isProviderExist(providerInput, this.props.providers)) {
         this.setState({
           providerExists: true,
+          isEmpty: false,
         });
       } else {
         this.props.addNewProvider(providerInput);
         this.setState({
           providerInput: "",
           providerExists: false,
+          isEmpty: false,
         });
       }
     } else {
       this.setState({
-        providerExists: true,
+        isEmpty: true,
+        providerExists: false,
       });
     }
   };
@@ -105,6 +109,9 @@ class AddNewClient extends PureComponent {
                 Providers:
                 {this.state.providerExists && (
                   <span className="errors"> {`*already exists`} </span>
+                )}
+                {this.state.isEmpty && (
+                  <span className="errors"> {`*is reuqired`} </span>
                 )}
               </Form.Label>
               <Col sm={6}>

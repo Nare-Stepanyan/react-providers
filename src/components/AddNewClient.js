@@ -7,6 +7,7 @@ import { isProviderExist } from "./../helpers/utils";
 class AddNewClient extends PureComponent {
   state = {
     providerInput: "",
+    providerExists: false,
   };
   handleClick = () => {
     const { providerInput } = this.state;
@@ -23,7 +24,7 @@ class AddNewClient extends PureComponent {
       }
     } else {
       this.setState({
-        providerInput: "*name is required",
+        providerExists: true,
       });
     }
   };
@@ -101,6 +102,9 @@ class AddNewClient extends PureComponent {
             <Form.Group as={Row} controlId="formHorizontalProviders">
               <Form.Label column sm={2}>
                 Providers:
+                {this.state.providerExists && (
+                  <span className="errors"> {`*already exists`} </span>
+                )}
               </Form.Label>
               <Col sm={6}>
                 <Form.Control

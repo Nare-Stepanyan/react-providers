@@ -20,6 +20,7 @@ class AddNewClient extends PureComponent {
         this.props.addNewProvider(providerInput);
         this.setState({
           providerInput: "",
+          providerExists: false,
         });
       }
     } else {

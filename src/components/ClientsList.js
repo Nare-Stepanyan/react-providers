@@ -260,7 +260,8 @@ class ClientsList extends PureComponent {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Providers</th>
+                {/* <th>Providers</th> */}
+                <th>Companies</th>
                 <th></th>
               </tr>
             </thead>

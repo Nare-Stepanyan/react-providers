@@ -106,7 +106,8 @@ class AddNewClient extends PureComponent {
             </Form.Group>
             <Form.Group as={Row} controlId="formHorizontalProviders">
               <Form.Label column sm={2}>
-                Providers:
+                {/* Providers: */}
+                Companies:
                 {this.state.providerExists && (
                   <span className="errors"> {`*already exists`} </span>
                 )}
@@ -126,7 +127,8 @@ class AddNewClient extends PureComponent {
                   variant="light"
                   onClick={this.handleClick}
                   disabled={selectedProviders.size > 0 ? true : false}>
-                  Add Provider
+                  {/* Add Provider */}
+                  Add Company
                 </Button>
               </Col>
             </Form.Group>

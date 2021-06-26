@@ -154,7 +154,8 @@ class EditClient extends PureComponent {
               </Form.Group>
               <Form.Group as={Row} controlId="formHorizontalProviders">
                 <Form.Label column sm={2}>
-                  Providers:
+                  {/* Providers: */}
+                  Companies:
                 </Form.Label>
                 <Col sm={6}>
                   <Form.Control
@@ -166,7 +167,8 @@ class EditClient extends PureComponent {
                 </Col>
                 <Col sm={4}>
                   <Button variant="light" onClick={this.handleNewProvider}>
-                    Add Provider
+                    {/* Add Provider */}
+                    Add Company
                   </Button>
                 </Col>
               </Form.Group>

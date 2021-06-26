@@ -21,7 +21,8 @@ function EditProviderModal({ handleClose, provider, saveEditedProvider }) {
     <>
       <Modal size="sm" show={true} centered>
         <Modal.Header>
-          <Modal.Title style={{ color: "#17a2b8" }}>Edit Provider</Modal.Title>
+          {/* <Modal.Title style={{ color: "#17a2b8" }}>Edit Provider</Modal.Title> */}
+          <Modal.Title style={{ color: "#17a2b8" }}>Edit Company</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <input value={editedProvider.name} onChange={handleChange} />
